@@ -1,0 +1,31 @@
+﻿@{
+    @inject WebApplication2.Services.IMathService Get;
+}
+
+<h2>AccessServiceDirectly</h2>
+
+<p>Rand value first: @Get.FirstNumber</p>
+<p>Rand value second: @Get.SecondNumber</p>
+
+<b>Add :</b>
+<p>@Get.FirstNumber + @Get.SecondNumber = @Get.Sum()</p>
+
+<b>Sub :</b>
+<p>@Get.FirstNumber - @Get.SecondNumber = @Get.Sub()</p>
+
+<b>Mult :</b>
+<p>@Get.FirstNumber * @Get.SecondNumber = @Get.Mul()</p>
+
+<b>Div :</b>
+<p>
+    @Get.FirstNumber / @Get.SecondNumber =
+
+    @if (@Get.Div() == -1)
+    {
+        @: Error
+    }
+    else
+    {
+        @Get.Div()
+    }
+</p>

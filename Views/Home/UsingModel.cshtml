@@ -1,0 +1,29 @@
+﻿@model WebApplication2.Models.OperationsModel
+
+<h2>PassUsingModel</h2>
+
+<p>Rand value first: @Model.FirstNumb</p>
+<p>Rand value second: @Model.SecondNumb</p>
+
+<b>Add :</b>
+<p>@Model.FirstNumb + @Model.SecondNumb = @Model.Sum</p>
+
+<b>Sub :</b>
+<p>@Model.FirstNumb - @Model.SecondNumb = @Model.Sub</p>
+
+<b>Mult :</b>
+<p>@Model.FirstNumb * @Model.SecondNumb = @Model.Mul</p>
+
+<b>Div :</b>
+<p>
+    @Model.FirstNumb / @Model.SecondNumb =
+
+    @if (@Model.Div == -1)
+    {
+        @: Error
+    }
+    else
+    {
+        @Model.Div
+    }
+</p>

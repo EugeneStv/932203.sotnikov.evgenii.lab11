@@ -1,0 +1,31 @@
+﻿﻿@{
+    var data = ViewData["data"] as OperationsModel;
+
+}
+<h2> PassUsingViewData</h2>
+
+<p>Rand value first: @data.FirstNumb</p>
+<p>Rand value second: @data.SecondNumb</p>
+
+<b>Add :</b>
+<p> @data.FirstNumb + @data.SecondNumb = @data.Sum</p>
+
+<b>Sub :</b>
+<p> @data.FirstNumb - @data.SecondNumb = @data.Sub</p>
+
+<b>Mult :</b>
+<p> @data.FirstNumb * @data.SecondNumb = @data.Mul</p>
+
+<b>Div :</b>
+<p>
+    @data.FirstNumb / @data.SecondNumb =
+
+    @if (@data.Div == -1)
+    {
+        @: Error
+    }
+    else
+    {
+        @data.Div
+    }
+</p>

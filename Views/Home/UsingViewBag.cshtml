@@ -1,0 +1,28 @@
+﻿
+<h2>PassUsingViewBag</h2>
+
+<p>Rand value first: @ViewBag.data.FirstNumb</p>
+<p>Rand value second: @ViewBag.data.SecondNumb</p>
+
+<b>Add :</b>
+<p>@ViewBag.data.FirstNumb + @ViewBag.data.SecondNumb = @ViewBag.data.Sum</p>
+
+<b>Sub :</b>
+<p>@ViewBag.data.FirstNumb - @ViewBag.data.SecondNumb = @ViewBag.data.Sub</p>
+
+<b>Mult :</b>
+<p>@ViewBag.data.FirstNumb * @ViewBag.data.SecondNumb = @ViewBag.data.Mul</p>
+
+<b>Div :</b>
+<p>
+    @ViewBag.data.FirstNumb / @ViewBag.data.SecondNumb =
+
+    @if (@ViewBag.data.Div == -1)
+    {
+        @: Error
+    }
+    else
+    {
+        @ViewBag.data.Div
+    }
+</p>
